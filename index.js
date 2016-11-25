@@ -7,6 +7,17 @@ var productsController = require('./controllers/productsController.js');
 var app = express();
 var products = express.Router();
 
+//Connect to DB
+mongoose.connect('mongodb://localhost/products');
+
+var db = mongoose.connection;
+
+db.on('error', console.log.bind(console, 'connection error: '));
+
+db.once('open', function() {
+	console.log('Connection Success');
+});
+
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(methodOverride());
