@@ -4,6 +4,7 @@
   "description": "Dicis API Demo",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "TonyChagolla <TonnyChagolla@gmail.com>",
@@ -12,6 +13,9 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "method-override": "^2.3.7",
+    "mongoose": "^4.7.0"
+  },
+  "devDependencies": {
     "mongoose": "^4.7.0"
   }
 }
